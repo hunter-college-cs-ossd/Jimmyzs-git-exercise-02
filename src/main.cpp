@@ -35,7 +35,7 @@ using namespace std;
 /******************************************************************************/
 
 // The syntax of the output function that must be used to print an oddity.
-typedef ostream& (*output_function) (const ostream & out);
+typedef ostream& (*output_function) (ostream & out);
 
 
 /******************************************************************************
@@ -44,7 +44,10 @@ typedef ostream& (*output_function) (const ostream & out);
 
 ******************************************************************************/
 
-
+ostream& yizongk_oddity(ostream& out) {
+    out << "How does the guy who drives the snowplow get to work in the mornings?\n";
+    return out;
+}
 
 
 
@@ -53,6 +56,9 @@ int main(int argc, char* argv[] )
 {
 
     // Calls to output functions
+    output_function a;
+    a = &yizongk_oddity;
+    a(cout);
 
 
 
