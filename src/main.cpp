@@ -1,12 +1,13 @@
 /******************************************************************************
   Title          : main.cpp
-  Authors        : Jimmyzs, LiudmilaZyrianova239,yizongk
+  Authors        : Jimmyzs
   Created on     : October  7, 2018
   Description    : Displays random peculiar facts
   Purpose        : To exercise collaborative source code development
   Usage          : nuttyfact
   Build with     : g++ -Wall -g -o oddities  main.cpp
   Modifications  : Added LiudmilaZyrianova239_oddity to main.cpp
+                   Added yizongk_oddity to main.cpp
   Notes:
   The number N below is the number of people on each team.
   This program prints N peculiar facts, called "oddities" here.
@@ -50,7 +51,7 @@ ostream& yizongk_oddity(ostream& out) {
 
 ostream& Jimmyzs_oddity(ostream & out)
 {
-    out<< "Why are there flotation devices under plane seats instead of parachutes?\n";
+    out<< "This is a collection of strange but true facts.\n";
     return out;
 }
 
