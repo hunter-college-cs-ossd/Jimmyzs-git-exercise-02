@@ -1,6 +1,6 @@
 /******************************************************************************
   Title          : main.cpp
-  Author         : LiudmilaZyrianova239
+  Authors        : Jimmyzs, LiudmilaZyrianova239
   Created on     : October  7, 2018
   Description    : Displays random peculiar facts
   Purpose        : To exercise collaborative source code development
@@ -35,11 +35,17 @@ using namespace std;
 /******************************************************************************/
 
 // The syntax of the output function that must be used to print an oddity.
-typedef ostream& (*output_function) (const ostream & out);
+typedef ostream& (*output_function) (ostream & out);
 
 
 ostream& LiudmilaZyrianova239_oddity(ostream & out){
     out << "If nothing ever sticks to TEFLON, how do they make TEFLON stick to the pan?\n";
+    return out;
+}
+
+ostream& Jimmyzs_oddity(ostream & out)
+{
+    out<<"Why are there flotation devices under plane seats instead of parachutes?\n";
     return out;
 }
 
@@ -51,6 +57,9 @@ int main(int argc, char* argv[] )
 {
 
     // Calls to output functions
+    output_function Jimmyzs;
+    Jimmyzs = Jimmyzs_oddity;
+    Jimmyzs(cout);
     LiudmilaZyrianova239_oddity(cout);
 
 
