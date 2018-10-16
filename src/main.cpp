@@ -1,6 +1,6 @@
 /******************************************************************************
   Title          : main.cpp
-  Authors        : Jimmyzs, LiudmilaZyrianova239
+  Authors        : Jimmyzs, LiudmilaZyrianova239,yizongk
   Created on     : October  7, 2018
   Description    : Displays random peculiar facts
   Purpose        : To exercise collaborative source code development
@@ -43,12 +43,16 @@ ostream& LiudmilaZyrianova239_oddity(ostream & out){
     return out;
 }
 
-ostream& Jimmyzs_oddity(ostream & out)
-{
-    out<<"Why are there flotation devices under plane seats instead of parachutes?\n";
+ostream& yizongk_oddity(ostream& out) {
+    out << "How does the guy who drives the snowplow get to work in the mornings?\n";
     return out;
 }
 
+ostream& Jimmyzs_oddity(ostream & out)
+{
+    out<< "Why are there flotation devices under plane seats instead of parachutes?\n";
+    return out;
+}
 
 
 
@@ -57,10 +61,17 @@ int main(int argc, char* argv[] )
 {
 
     // Calls to output functions
+    //Jimmyzs Function
     output_function Jimmyzs;
     Jimmyzs = Jimmyzs_oddity;
     Jimmyzs(cout);
+    //Liudmila Fuction
     LiudmilaZyrianova239_oddity(cout);
+    //yizongk Function
+    output_function a;
+    a = &yizongk_oddity;
+    a(cout);
+
 
 
     return 0;
