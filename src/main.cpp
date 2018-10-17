@@ -55,7 +55,11 @@ ostream& Jimmyzs_oddity(ostream & out)
     return out;
 }
 
-
+ostream& audiencia_cereal_oddity(ostream& out)
+{
+    out << "Have you ever imagined a world with no hypothetical situations?\n";
+    return out;
+}
 
 
 int main(int argc, char* argv[] )
@@ -72,8 +76,9 @@ int main(int argc, char* argv[] )
     output_function a;
     a = &yizongk_oddity;
     a(cout);
-
-
+    //audiencia_cereal function
+    output_function audiencia_cereal = audiencia_cereal_oddity;
+    audiencia_cereal(cout);
 
     return 0;
 }
